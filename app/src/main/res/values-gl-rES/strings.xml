@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">U6_ESTUDIANTE_RAFAEL</string>
+    <string name="camera_icon">Cámara</string>
+    <string name="menu_Exit">Salir</string>
+    <string name="btn_selectActivity">Actividad 1 / Actividad 2</string>
+</resources>

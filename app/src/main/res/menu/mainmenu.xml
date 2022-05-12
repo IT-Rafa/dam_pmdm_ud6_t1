@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/cameraOption"
+        android:icon="@drawable/camera"
+        android:orderInCategory="100"
+        android:title="@string/camera_icon"
+        app:showAsAction="ifRoom" />
 
-    <item android:title="@string/exit" />
+    <item
+        android:id="@+id/exit_option"
+        android:orderInCategory="100"
+        android:title="@string/menu_Exit"
+        app:showAsAction="never" />
 </menu>
