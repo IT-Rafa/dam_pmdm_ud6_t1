@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_backbtn_used">Exit activity without Exit button</string>
+    <string name="msg_fail_check_even">Check if even failed</string>
+    <string name="isOddMsg">is odd</string>
+</resources>

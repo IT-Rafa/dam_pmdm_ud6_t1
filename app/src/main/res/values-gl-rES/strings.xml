@@ -6,4 +6,7 @@
     <string name="exit_op">Sair</string>
     <string name="back">Volver</string>
     <string name="randomNumMsg">O número xenerado e</string>
+    <string name="no_backbtn_used">Exit activity without Exit button</string>
+    <string name="msg_fail_check_even">Check if even failed</string>
+    <string name="isOddMsg">is odd</string>
 </resources>

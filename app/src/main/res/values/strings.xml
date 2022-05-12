@@ -5,4 +5,8 @@
     <string name="btn_selectActivity">Activity 1 / Activity 2</string>
     <string name="back">Back</string>
     <string name="randomNumMsg">The generated number is </string>
+    <string name="no_backbtn_used">Exit activity without Exit button</string>
+    <string name="msg_fail_check_even">Check if even failed</string>
+    <string name="isEvenMsg">Is even</string>
+    <string name="isOddMsg">is odd</string>
 </resources>
