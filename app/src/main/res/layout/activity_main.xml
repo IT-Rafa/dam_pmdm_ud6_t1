@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_changeActivity" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/showPicture"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
