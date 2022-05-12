@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">U6_ESTUDIANTE_RAFAEL</string>
+    <string name="btn_selectActivity">Actividade 1 / Actividade 2</string>
+    <string name="camera_op">Cámara</string>
+    <string name="exit_op">Salir</string>
+    <string name="back">Volver</string>
+    <string name="randomNumMsg">El número generado es</string>
+</resources>

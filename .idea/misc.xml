@@ -2,12 +2,13 @@
 <project version="4">
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
-      <map>
+      <map>s
         <entry key="..\:/source/dam/pmdm/dam_pmdm_ud6_t1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.10572916666666667" />
         <entry key="..\:/source/dam/pmdm/dam_pmdm_ud6_t1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.10572916666666667" />
         <entry key="..\:/source/dam/pmdm/dam_pmdm_ud6_t1/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/source/dam/pmdm/dam_pmdm_ud6_t1/app/src/main/res/layout/activity_show_number.xml" value="0.33" />
         <entry key="..\:/source/dam/pmdm/dam_pmdm_ud6_t1/app/src/main/res/menu/mainmenu.xml" value="0.33" />
+        <entry key="..\:/source/dam/pmdm/dam_pmdm_ud6_t1/app/src/main/res/mipmap-anydpi-v26/camera.xml" value="0.21875" />
       </map>
     </option>
   </component>

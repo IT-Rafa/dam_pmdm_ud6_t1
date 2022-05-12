@@ -1,10 +1,10 @@
 package es.itrafa.u6_student_rafael;
 
+import es.itrafa.u6_student_rafael.R;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,6 +12,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
+
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.mainmenu, menu);
+
         return true;
     }
 
@@ -69,5 +73,6 @@ public class MainActivity extends AppCompatActivity {
 
                 }
         );
+
     }
 }

@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">U6_STUDENT_RAFAEL</string>
-    <string name="exit">Exit</string>
-    <string name="activity_1_activity_2">Activity 1 / Activity 2</string>
+    <string name="camera_op">Camera</string>
+    <string name="exit_op">Exit</string>
+    <string name="btn_selectActivity">Activity 1 / Activity 2</string>
     <string name="back">Back</string>
     <string name="randomNumMsg">The generated number is </string>
 </resources>
