@@ -1,14 +1,12 @@
 package es.itrafa.u6_student_rafael;
 
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.Camera;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -18,6 +16,8 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Objects;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,28 +33,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolBar = findViewById(R.id.myToolBar);
         setSupportActionBar(myToolBar);
 
-
-
-
-
-        activityResultLauncher =
-                registerForActivityResult(new
-                        ActivityResultContracts.StartActivityForResult(), result -> {
-                    if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-                        Intent data = result.getData();
-                        if (data.hasExtra("IsRandomNumEven")) {
-                            if (data.getExtras().getBoolean("IsRandomNumEven")){
-                                Toast.makeText(getApplicationContext(), getString(R.string.isEvenMsg) , Toast.LENGTH_LONG).show();
-                            }else{
-                                Toast.makeText(getApplicationContext(), getString(R.string.isOddMsg) , Toast.LENGTH_LONG).show();
-                            }
-
-                        } else {
-                            Toast.makeText(getApplicationContext(), getString(R.string.msg_fail_check_even), Toast.LENGTH_LONG).show();
-                        }
-                    } else
-                        Toast.makeText(getApplicationContext(), getString(R.string.no_backbtn_used), Toast.LENGTH_LONG).show();
-                });
         ManageEventsMainActivity();
     }
 
@@ -99,13 +77,28 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK && data != null) {
 
-        // FALLO result code = -1
+            if (data.hasExtra("IsRandomNumEven")) {
+                if (data.getExtras().getBoolean("IsRandomNumEven")){
+                    Toast.makeText(getApplicationContext(), getString(R.string.isEvenMsg) , Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(getApplicationContext(), getString(R.string.isOddMsg) , Toast.LENGTH_LONG).show();
+                }
+
+            } else {
+                Toast.makeText(getApplicationContext(), getString(R.string.msg_fail_check_even), Toast.LENGTH_LONG).show();
+            }
+        } else{
+            Toast.makeText(getApplicationContext(), getString(R.string.no_backbtn_used), Toast.LENGTH_LONG).show();
+
+        }
+
         if (resultCode == RESULT_OK) {
             if(requestCode == REQUEST_IMAGE_CAPTURE){
-                Bundle extras = data.getExtras();
+                Bundle extras = Objects.requireNonNull(data).getExtras();
                 Bitmap imageBitmap = (Bitmap) extras.get("data");
-                ImageView iv = (ImageView) findViewById(R.id.showPicture);
+                ImageView iv = findViewById(R.id.showPicture);
                 iv.setImageBitmap(imageBitmap);
             }else{
                 Toast.makeText(getApplicationContext(), "Fail recover picture"
@@ -115,9 +108,10 @@ public class MainActivity extends AppCompatActivity {
 
         }else{
             Toast.makeText(getApplicationContext(), "Fail recover picture: "
-                     + "resultCode error: " + resultCode,
+                            + "resultCode error: " + resultCode,
                     Toast.LENGTH_LONG).show();
         }
+
 
     }
 
